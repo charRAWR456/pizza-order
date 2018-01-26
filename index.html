@@ -47,9 +47,9 @@
             <select class="form-control" id="crust">
               <option>Select Crust</option>
               <option>Thin Crust</option>
-              <option>Hand Tossed</option>
+              <option>Hand Tossed Crust</option>
               <option>Stuffed Crust</option>
-              <option>Deep Dish</option>
+              <option>Deep Dish Crust</option>
             </select>
           </div>
         </div>
@@ -77,36 +77,37 @@
             </div>
             <div class="form-group meatToppings">
               <h4>Please select you Meat toppings:</h4>
-                <input type="checkbox" name="meatToppings" value="peperoni"> Peperoni<br>
-                <input type="checkbox" name="meatToppings" value="sausage">Italian Sausage<br>
-                <input type="checkbox" name="meatToppings" value="bacon">bacon<br>
-                <input type="checkbox" name="meatToppings" value="canadianBacon">Canadian Bacon<br>
-                <input type="checkbox" name="meatToppings" value="chicken">Grilled Chicken<br>
-                <input type="checkbox" name="meatToppings" value="anchovie">Anchovie<br>
-                <input type="checkbox" name="meatToppings" value="beef">Beef<br>
+                <input type="checkbox" name="meatToppings" value="Pepperoni"> Pepperoni<br>
+                <input type="checkbox" name="meatToppings" value="Italian Sausage">Italian Sausage<br>
+                <input type="checkbox" name="meatToppings" value="Bacon">Bacon<br>
+                <input type="checkbox" name="meatToppings" value="Canadian Bacon">Canadian Bacon<br>
+                <input type="checkbox" name="meatToppings" value="Grilled Chicken">Grilled Chicken<br>
+                <input type="checkbox" name="meatToppings" value="Anchovies">Anchovies<br>
+                <input type="checkbox" name="meatToppings" value="Beef">Beef<br>
               </div>
               <div class="form-group vegtableToppings">
                 <h4>Please select your Vegtable toppings:</h4>
-                <input type="checkbox" name="vegtableToppings" value="olive"> Black Olives<br>
-                <input type="checkbox" name="vegtableToppings" value="mushroom">Mushroom<br>
-                <input type="checkbox" name="vegtableToppings" value="greenPepper">Green Peppers<br>
-                <input type="checkbox" name="vegtableToppings" value="tomatoe">Tomatoe<br>
-                <input type="checkbox" name="vegtableToppings" value="onion">Onions<br>
-                <input type="checkbox" name="vegtableToppings" value="bananaPepper">Banana Peppers<br>
-                <input type="checkbox" name="vegtableToppings" value="pineapple">Pineapple<br>
-                <input type="checkbox" name="vegtableToppings" value="artichoke">Artichoke Heart<br>
-                <input type="checkbox" name="vegtableToppings" value="garlic">Roasted Garlic<br>
+                <input type="checkbox" name="vegtableToppings" value="Black Olives"> Black Olives<br>
+                <input type="checkbox" name="vegtableToppings" value="Mushroom">Mushroom<br>
+                <input type="checkbox" name="vegtableToppings" value="Green Peppers">Green Peppers<br>
+                <input type="checkbox" name="vegtableToppings" value="Tomatoe">Tomatoe<br>
+                <input type="checkbox" name="vegtableToppings" value="Onions">Onions<br>
+                <input type="checkbox" name="vegtableToppings" value="Banana Peppers">Banana Peppers<br>
+                <input type="checkbox" name="vegtableToppings" value="Pineapple">Pineapple<br>
+                <input type="checkbox" name="vegtableToppings" value="Artichoke Hearts">Artichoke Hearts<br>
+                <input type="checkbox" name="vegtableToppings" value="Roasted Garlic">Roasted Garlic<br>
               </div>
 
 
 
             <button type="submit" class="btn btn-danger" id="submitOrderButton">Submit Order!</button>
           </form>
-          <span id="toppings">
-                  <p><b>Your toppings:</b></p>
-                </span>
 
-          <div id="outputOrder">
+          <div id="outputOrder" class="well">
+            <p><b>Pizza Confirmation:</b><br>
+            </p>
+            <h5>Toppings:</h5>
+            <p><span id="toppings"></span></p>
 
           </div>
 

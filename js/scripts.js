@@ -36,9 +36,16 @@ $(document).ready(function(){
 
 $("#submitOrderButton").click(function(event){
 event.preventDefault();
+var name = $("#customerName").val();
+var number = $("#customerNumber").val();
+var address = $("#customerAddress").val();
 var crust = $("#crust").val();
 var cheese = $("#cheese").val();
 var sauce = $("#sauce").val();
+
+$('#outputOrder').append("with " + crust + ", " + cheese + ", and " + sauce + " sauce. " + "<br>" + "<br>" +  "If everything looks correct, your pizza will be delivered to: " + "<br>" + address + "<br>"+"If we have any questions we will contact you at: " + "<br>" + number + "<br>" +"<br>" + name + " for your order!");
+
+
 $("input:checkbox[name=meatToppings]:checked").each(function(){
       var meatToppings = $(this).val();
       $('#toppings').append(meatToppings+ "<br>");
@@ -46,8 +53,8 @@ $("input:checkbox[name=meatToppings]:checked").each(function(){
 $("input:checkbox[name=vegtableToppings]:checked").each(function(){
       var vegtableToppings = $(this).val();
       $('#toppings').append(vegtableToppings+ "<br>");
+      $("#outputOrder").show();
     });
-    
-  alert(crust + cheese + sauce);
+
 });
 });
