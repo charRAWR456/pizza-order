@@ -1,93 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Pizza Order</title>
-  </head>
-  <body>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza Order</title>
+</head>
+<body>
   <div class="container">
     <h1>Order a Pizza</h1>
     <form id="customer">
-        <div class="form-group">
-          <h3>Customer Information</h3>
-          <label for="customerName">Please enter your name:</label>
-          <input id="customerName" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="customerNumber">Please enter your phone number:</label>
-          <input id="customerNumber" class="form-control" type="text">
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="orderType" value="carryOut">
-            Carry Out
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="orderType" value="delivery">
-            Delivery
-          </label>
-        </div>
-        <button type="button" class="btn btn-danger" id="orderTypeButton">Start Order</button>
-        <div class="form-group address">
-          <h2>Delivery Address</h2>
-          <label for="customerAddress">Please enter your address:</label>
-          <input id="customerAddress" class="form-control" type="text">
-        </div>
-      </form>
-      <form id="customerOrder">
-        <h2>Customize your Pizza</h2>
-        <div class="row">
-          <div class ="col-xs-3">
-          </div>
-          <div class ="col-xs-2">
-        <div class="form-group">
-          <select class="form-control" id="crust">
-            <label>Crust Type</label>
-            <option>Coffee</option>
-            <option>Tea</option>
-            <option>Kombucha</option>
-            <option>Water</option>
-          </select>
-</div>
-<div class ="col-xs-2">
-<div class="form-group">
-<select class="form-control" id="cheese">
-  <option>Coffee</option>
-  <option>Tea</option>
-  <option>Kombucha</option>
-  <option>Water</option>
-</select>
-</div>
-<div class ="col-xs-2">
-<div class="form-group">
-<h2>Customize your Pizza</h2>
-<select class="form-control" id="sauce">
-  <option>Coffee</option>
-  <option>Tea</option>
-  <option>Kombucha</option>
-  <option>Water</option>
-</select>
-</div>
-<div class ="col-xs-3">
-</div>
-</div>
-
-        <button type="submit" class="btn btn-danger">Submit Order!</button>
+      <div class="form-group">
+        <h3>Customer Information</h3>
+        <label for="customerName">Please enter your name:</label>
+        <input id="customerName" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="customerNumber">Please enter your phone number:</label>
+        <input id="customerNumber" class="form-control" type="text">
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="orderType" value="carryOut">
+          Carry Out
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="orderType" value="delivery">
+          Delivery
+        </label>
+      </div>
+      <button type="button" class="btn btn-danger" id="orderTypeButton">Start Order</button>
+      <div class="form-group address">
+        <h2>Delivery Address</h2>
+        <label for="customerAddress">Please enter your address:</label>
+        <input id="customerAddress" class="form-control" type="text">
+      </div>
     </form>
+    <form id="customerOrder">
+      <h2>Customize your Pizza</h2>
+      <div class="row">
+        <div class ="col-xs-4">
+          <div class="form-group">
+            <select class="form-control" id="crust">
+              <option>Select Crust</option>
+              <option>Thin Crust</option>
+              <option>Hand Tossed</option>
+              <option>Stuffed Crust</option>
+              <option>Deep Dish</option>
+            </select>
+          </div>
+        </div>
+          <div class ="col-xs-4">
+            <div class="form-group">
+              <select class="form-control" id="cheese">
+                <option>Select Cheese</option>
+                <option>Regular Cheese</option>
+                <option>Extra Cheese</option>
+                <option>No Cheese</option>
+              </select>
+            </div>
+          </div>
+            <div class ="col-xs-4">
+              <div class="form-group">
+                <select class="form-control" id="sauce">
+                  <option>Choose Sauce</option>
+                  <option>Regular</option>
+                  <option>BBQ</option>
+                  <option>Ranch</option>
+                  <option>Garlic Alfredo</option>
+                </select>
+              </div>
+            </div>
+            </div>
+            <div class="form-group meatToppings">
+              <h4>Please select you Meat toppings:</h4>
+                <input type="checkbox" name="meatToppings" value="peperoni"> Peperoni<br>
+                <input type="checkbox" name="meatToppings" value="sausage">Italian Sausage<br>
+                <input type="checkbox" name="meatToppings" value="bacon">bacon<br>
+                <input type="checkbox" name="meatToppings" value="canadianBacon">Canadian Bacon<br>
+                <input type="checkbox" name="meatToppings" value="chicken">Grilled Chicken<br>
+                <input type="checkbox" name="meatToppings" value="anchovie">Anchovie<br>
+                <input type="checkbox" name="meatToppings" value="beef">Beef<br>
+              </div>
+              <div class="form-group vegtableToppings">
+                <h4>Please select your Vegtable toppings:</h4>
+                <input type="checkbox" name="vegtableToppings" value="olive"> Black Olives<br>
+                <input type="checkbox" name="vegtableToppings" value="mushroom">Mushroom<br>
+                <input type="checkbox" name="vegtableToppings" value="greenPepper">Green Peppers<br>
+                <input type="checkbox" name="vegtableToppings" value="tomatoe">Tomatoe<br>
+                <input type="checkbox" name="vegtableToppings" value="onion">Onions<br>
+                <input type="checkbox" name="vegtableToppings" value="bananaPepper">Banana Peppers<br>
+                <input type="checkbox" name="vegtableToppings" value="pineapple">Pineapple<br>
+                <input type="checkbox" name="vegtableToppings" value="artichoke">Artichoke Heart<br>
+                <input type="checkbox" name="vegtableToppings" value="garlic">Roasted Garlic<br>
+              </div>
 
 
-      <div id="outputOrder">
+
+            <button type="submit" class="btn btn-danger" id="submitOrderButton">Submit Order!</button>
+          </form>
+          <span id="toppings">
+                  <p><b>Your toppings:</b></p>
+                </span>
+
+          <div id="outputOrder">
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
-
-  </div>
-
-  </body>
-</html>
+    </body>
+    </html>

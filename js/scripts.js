@@ -21,8 +21,8 @@ Customer.prototype.orderInfo = function(){
 
 $(document).ready(function(){
 
-  $("#orderTypeButton").click(function(event){
-    event.preventDefault();
+
+  $("#orderTypeButton").click(function(){
     if ($("input:radio[name=orderType]:checked").val() == "delivery"){
       $(".address").show();
       $("#customerOrder").show();
@@ -32,6 +32,22 @@ $(document).ready(function(){
       $("#customerOrder").show();
       $(".address").hide();
     }
-
   });
+
+$("#submitOrderButton").click(function(event){
+event.preventDefault();
+var crust = $("#crust").val();
+var cheese = $("#cheese").val();
+var sauce = $("#sauce").val();
+$("input:checkbox[name=meatToppings]:checked").each(function(){
+      var meatToppings = $(this).val();
+      $('#toppings').append(meatToppings+ "<br>");
+    });
+$("input:checkbox[name=vegtableToppings]:checked").each(function(){
+      var vegtableToppings = $(this).val();
+      $('#toppings').append(vegtableToppings+ "<br>");
+    });
+    
+  alert(crust + cheese + sauce);
+});
 });
