@@ -13,11 +13,6 @@ function Customer(name, number, address){
   this.number = number;
 }
 
-Customer.prototype.price = function(){
-
-
-}
-
 $(document).ready(function(){
 
 
@@ -52,10 +47,34 @@ $(document).ready(function(){
       $('#toppings').append(vegtableToppings+ "<br>");
       $("#outputOrder").show();
     });
-    var customerPizza = new Pizza(size, crust, meats, veggies, cheese, sauce)
-    var customer = new Customer(name, number, address)
-    console.log(customer)
-    console.log(customerPizza)
-    $('#outputOrder').append("with " + crust + ", " + cheese + ", and " + sauce + " sauce. " + "<br>" + "<br>" +  "If everything looks correct, your " + size + " pizza will be delivered to: " + "<br>" + address + "<br>"+"If we have any questions we will contact you at: " + "<br>" + number + "<br>" + "<br>" + "Thank you " + name + " for your order!");
+
+    customerPizza = new Pizza(size, crust, meats, veggies, cheese, sauce)
+    customer = new Customer(name, number, address)
+
+    Pizza.prototype.price = function(){
+      var pizzaPrice = 15.00;
+      if (this.size === "Personal"){
+         pizzaPrice -= 5;
+      } else if(this.size === "Small"){
+         pizzaPrice -= 2;
+      }else if(this.size === "Medium"){
+          pizzaPrice;
+      }else if(this.size === "Large"){
+         pizzaPrice += 3;
+      }
+
+
+      if (this.crust === "Stuffed Crust"){
+        pizzaPrice += 3;
+      }
+
+      if (this.cheese === "Extra Cheese"){
+        pizzaPrice += 3;
+      }
+      return pizzaPrice;
+    }
+
+
+    $('#outputOrder').append("with " + customerPizza.crust + ", " + customerPizza.cheese + ", and " + customerPizza.sauce + " sauce. " + "<br>" + "<br>" +  "If everything looks correct, your " + customerPizza.size + " pizza will be delivered to: " + "<br>" + customer.address + "<br>"+"If we have any questions we will contact you at: " + "<br>" + customer.number + "<br>" + "<br>" + "Thank you " + name + " for your order! Your total is: $" +customerPizza.price() + ".00." );
   });
 });
