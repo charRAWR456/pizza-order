@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Order</title>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Order a Pizza</h1>
+    <form id="customer">
+        <div class="form-group">
+          <h3>Customer Information</h3>
+          <label for="customerName">Please enter your name:</label>
+          <input id="customerName" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="customerNumber">Please enter your phone number:</label>
+          <input id="customerNumber" class="form-control" type="text">
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="orderType" value="carryOut">
+            Carry Out
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="orderType" value="delivery">
+            Delivery
+          </label>
+        </div>
+        <button type="button" class="btn btn-danger" id="orderTypeButton">Start Order</button>
+        <div class="form-group address">
+          <h2>Delivery Address</h2>
+          <label for="customerAddress">Please enter your address:</label>
+          <input id="customerAddress" class="form-control" type="text">
+        </div>
+      </form>
+      <form id="customerOrder">
+        <h2>Customize your Pizza</h2>
+        <div class="row">
+          <div class ="col-xs-3">
+          </div>
+          <div class ="col-xs-2">
+        <div class="form-group">
+          <select class="form-control" id="crust">
+            <label>Crust Type</label>
+            <option>Coffee</option>
+            <option>Tea</option>
+            <option>Kombucha</option>
+            <option>Water</option>
+          </select>
+</div>
+<div class ="col-xs-2">
+<div class="form-group">
+<select class="form-control" id="cheese">
+  <option>Coffee</option>
+  <option>Tea</option>
+  <option>Kombucha</option>
+  <option>Water</option>
+</select>
+</div>
+<div class ="col-xs-2">
+<div class="form-group">
+<h2>Customize your Pizza</h2>
+<select class="form-control" id="sauce">
+  <option>Coffee</option>
+  <option>Tea</option>
+  <option>Kombucha</option>
+  <option>Water</option>
+</select>
+</div>
+<div class ="col-xs-3">
+</div>
+</div>
+
+        <button type="submit" class="btn btn-danger">Submit Order!</button>
+    </form>
+
+
+      <div id="outputOrder">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </body>
+</html>
