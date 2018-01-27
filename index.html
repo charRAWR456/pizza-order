@@ -14,11 +14,11 @@
       <div class="form-group">
         <h3>Customer Information</h3>
         <label for="customerName">Please enter your name:</label>
-        <input id="customerName" class="form-control" type="text">
+        <input id="customerName" class="form-control inputBox" type="text">
       </div>
       <div class="form-group">
         <label for="customerNumber">Please enter your phone number:</label>
-        <input id="customerNumber" class="form-control" type="text">
+        <input id="customerNumber" class="form-control inputBox" type="text">
       </div>
       <div class="radio">
         <label>
@@ -36,7 +36,7 @@
       <div class="form-group address">
         <h2>Delivery Address</h2>
         <label for="customerAddress">Please enter your address:</label>
-        <input id="customerAddress" class="form-control" type="text">
+        <input id="customerAddress" class="form-control inputBox" type="text" value="Pick Up">
       </div>
     </form>
     <form id="customerOrder">
@@ -95,6 +95,7 @@
         <input type="checkbox" name="meatToppings" value="Grilled Chicken">Grilled Chicken<br>
         <input type="checkbox" name="meatToppings" value="Anchovies">Anchovies<br>
         <input type="checkbox" name="meatToppings" value="Beef">Beef<br>
+        <input type="checkbox" name="meatToppings" value="No Meat"><strong>No Meat</strong><br>
       </div>
       <div class="form-group vegtableToppings">
         <h4>Please select your Vegtable toppings:</h4>
@@ -107,13 +108,14 @@
         <input type="checkbox" name="vegtableToppings" value="Pineapple">Pineapple<br>
         <input type="checkbox" name="vegtableToppings" value="Artichoke Hearts">Artichoke Hearts<br>
         <input type="checkbox" name="vegtableToppings" value="Roasted Garlic">Roasted Garlic<br>
+        <input type="checkbox" name="vegtableToppings" value="No Veggies"><strong>No Veggies</strong><br>
       </div>
       <button type="submit" class="btn btn-danger" id="submitOrderButton">Submit Order!</button>
     </form>
     <div id="outputOrder" class="well">
-      <p><b>Pizza Confirmation:</b><br>
+      <h4><b>Pizza Confirmation:</b></h4>
       </p>
-      <h5>Toppings:</h5>
+      <h5><b>Toppings:</b></h5>
       <p><span id="toppings"></span></p>
     </div>
   </div>

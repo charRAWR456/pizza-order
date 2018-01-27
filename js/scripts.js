@@ -72,6 +72,6 @@ $(document).ready(function(){
     customer = new Customer(name, number, address)
 
 
-    $('#outputOrder').append("with " + customerPizza.crust + ", " + customerPizza.cheese + ", and " + customerPizza.sauce + " sauce. " + "<br>" + "<br>" +  "If everything looks correct, your " + customerPizza.size + " pizza will be delivered to: " + "<br>" + customer.address + "<br>"+"If we have any questions we will contact you at: " + "<br>" + customer.number + "<br>" + "<br>" + "Thank you " + name + " for your order! Your total is: $" +customerPizza.price() + ".00." );
+    $('#outputOrder').append("with " + customerPizza.crust + ", " + customerPizza.cheese + ", and " + customerPizza.sauce + " sauce. " + "<br>" + "<br>" +  "If everything looks correct, your " + customerPizza.size + " pizza will be" + "<b>" + " delivered to: " + "</b>" + "<br>" + customer.address + "<br>" + "<br>" + "If we have any questions we will" + "<b>" + " contact you at: " + "</b>" + "<br>" + customer.number + "<br>" + "<br>" + "Thank you " + "<b>" + name + "</b>" + " for your order! Your total is:"+"<b>" + " $" + customerPizza.price() + ".00." + "</b>");
   });
 });

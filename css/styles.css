@@ -8,5 +8,17 @@
   display: none;
 }
 body{
-  background-color: #ffbcbc;
+  background: darksalmon url("../img/pizza.png") no-repeat fixed bottom right;
+  font-family: sans-serif;
+
+}
+
+.well{
+  background-color: #ffcdbc;
+  border: 2px 2px inset salmon;
+  float: left;
+}
+
+.inputBox {
+  width: 50%;
 }
